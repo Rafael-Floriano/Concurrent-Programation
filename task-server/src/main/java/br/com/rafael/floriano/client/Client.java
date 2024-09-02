@@ -5,6 +5,11 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
+/**
+ * Client class is mock of client requests
+ * you can start another JVM running this class
+ * to emulate a client
+ */
 public class Client {
 
     public static void main(String[] args) {

@@ -2,6 +2,10 @@ package br.com.rafael.floriano.task;
 
 import java.net.Socket;
 
+/**
+ * PrimaryTask emulates a heavy task in the server
+ * with @code{Thread.sleep(20000)}
+ */
 public class PrimaryTask implements Runnable {
 
     private Socket socket;

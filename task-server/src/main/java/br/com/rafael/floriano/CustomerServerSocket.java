@@ -6,6 +6,12 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * CustomerServerSocket implements a Server Socket implementation
+ * @code{serverSocket.accept()} pause the main thread and wait for
+ * new connection of client socket, all requests create a new Thread
+ * to process the client task
+ */
 public class CustomerServerSocket {
 
     public void init() {
