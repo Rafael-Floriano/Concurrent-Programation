@@ -10,18 +10,16 @@ import java.util.Scanner;
  * you can start another JVM running this class
  * to emulate a client
  */
-public class Client {
+public class Client implements Runnable {
 
-    public static void main(String[] args) {
+
+    public static void makeConnection() {
 
         try {
             Socket socket = new Socket("localhost", 12345);
             System.out.println("Conection establish'");
-
             Scanner scanner = new Scanner(System.in);
-
             scanner.next();
-
             socket.close();
         } catch (UnknownHostException e) {
             throw new RuntimeException(e);
@@ -31,4 +29,8 @@ public class Client {
 
     }
 
+    @Override
+    public void run() {
+        this.makeConnection();
+    }
 }
