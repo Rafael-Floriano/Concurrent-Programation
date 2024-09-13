@@ -49,8 +49,8 @@ public class Client implements Runnable {
     private void createTcpInputConnection(final Socket socket) {
         try {
             Scanner scanner = new Scanner(socket.getInputStream());
-            while (scanner.hasNext()) {
-                System.out.println("SERVER RESPONSE - " + scanner.next());
+            while (scanner.hasNextLine()) {
+                System.out.println("SERVER RESPONSE - " + scanner.nextLine());
             }
         } catch (IOException e) {
             throw new RuntimeException("outputTask - ",e);
